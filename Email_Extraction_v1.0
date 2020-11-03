@@ -1,0 +1,16 @@
+import re
+
+def convertTuple(tup): 
+    str =  '@'.join(tup) 
+    return str
+    print(str)  
+
+pattern = r"([\w\d\.-]+)@([\w\.-]+)"             # [\w\.-]+  matches one or more word character, dot, or dash
+str = "Something, some text here etc..  thisisthefirst@somemail.com and again some text here 07-thesecondmail02here@mail.com.de dfgdfgdfdgdfg asdasdasd the-third.one@test3.co.uk etc etc the44fourth-mail@domain.com.nl ..."
+# The str which we defined upper row can be an imported text from another file such as a txt file.
+
+match = re.findall(pattern, str)
+
+for i in match:
+  # print(i)
+   print(convertTuple(i))
